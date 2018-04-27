@@ -1,0 +1,28 @@
+.index {
+    margin-top:      10vh;
+    margin-left:     2vw;
+    margin-right:    2vw;
+    grid-row-gap:    20vh;
+    grid-column-gap: 5vw;
+
+    img:first-of-type {
+        grid-row: span 1;
+        grid-column: 1 / 2;
+
+        width: 40vw;
+        margin-left: 5vw;
+        margin-top: auto;
+        margin-bottom: auto;
+
+        box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+        border-radius: 105%;
+    }
+
+    p:first-of-type {
+        grid-row: span 1;
+        grid-column: 2 / 3;
+        
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}

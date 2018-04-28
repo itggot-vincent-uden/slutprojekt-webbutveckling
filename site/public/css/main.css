@@ -1,6 +1,7 @@
 body {
   margin: 0px;
-  padding: 0px; }
+  padding: 0px;
+  background-color: #dddddd; }
 
 .grid-2x3 {
   display: grid;
@@ -8,6 +9,7 @@ body {
   grid-template-rows: 1fr 1fr 1fr; }
 
 .menu {
+  z-index: 101;
   position: fixed;
   background-color: cornflowerblue;
   height: 100vh;
@@ -27,10 +29,11 @@ body {
 .menuButton {
   position: fixed;
   top: 0px;
-  right: 0px; }
+  right: 0px;
+  z-index: 100; }
 
 aside {
-  background-color: #DDDDDD;
+  background-color: #aeb6be;
   padding: 8px;
   padding-top: 0px;
   border-radius: 3px;
@@ -60,18 +63,25 @@ aside {
       box-shadow: none;
       font-family: "Consolas"; }
   .codeWindow .outPutWindow {
-    background-color: #DDDDDD;
+    background-color: #aeb6be;
     width: 30%;
     height: 100%;
     float: right;
     border-radius: 0px 10px 10px 0px; }
+
+footer {
+  background-color: cornflowerblue;
+  width: 100vw;
+  height: 20vh;
+  margin-top: 10vh; }
 
 i.material-icons {
   font-size: 15vw;
   color: red; }
 
 p {
-  font-family: "Calibri"; }
+  font-family: "Calibri";
+  color: #000; }
 
 h2 {
   font-family: "Consolas";
@@ -81,7 +91,7 @@ h2 {
   margin-top: 10vh;
   margin-left: 2vw;
   margin-right: 2vw;
-  grid-row-gap: 20vh;
+  grid-row-gap: 17vh;
   grid-column-gap: 5vw; }
   .index img:first-of-type {
     grid-row: span 1;
@@ -92,8 +102,22 @@ h2 {
     margin-bottom: auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
     border-radius: 105%; }
-  .index p:first-of-type {
-    grid-row: span 1;
-    grid-column: 2 / 3;
-    margin-top: auto;
-    margin-bottom: auto; }
+
+.index > p:first-of-type {
+  grid-row: span 1;
+  grid-column: 2 / 3;
+  margin-top: auto;
+  margin-bottom: auto;
+  color: #FFF;
+  font-style: normal; }
+
+.bg-wrapper {
+  width: 100vw;
+  height: 60vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  z-index: -100; }
+  .bg-wrapper img {
+    width: 100vw; }

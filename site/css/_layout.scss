@@ -3,6 +3,7 @@
 body {
     margin: 0px;
     padding: 0px;
+    background-color: #dddddd;
 }
 
 .grid-2x3 {
@@ -12,6 +13,7 @@ body {
 }
 
 .menu {
+    z-index: 101;
     i.material-icons {
         text-align: right;
         width: 50vw;
@@ -35,6 +37,7 @@ body {
     position: fixed;
     top: 0px;
     right: 0px;
+    z-index: 100;
 }
 
 aside {
@@ -78,4 +81,11 @@ aside {
         float: right;
         border-radius: 0px 10px 10px 0px;
     }
+}
+
+footer {
+    background-color: $primary-color;
+    width: 100vw;
+    height: 20vh;
+    margin-top: 10vh;
 }

@@ -58,28 +58,21 @@ aside {
         float: left;
         border-radius: 10px 0px 0px 10px;
         padding: 0%;
-        textarea {
-            padding: 0%;
-            margin: 5%;
-            width: 90%;
-            height: 90%;
-            background-color: #303030;
-            border: none;
-            overflow: auto;
-            outline: none;
-
-            -webkit-box-shadow: none;
-            -moz-box-shadow: none;
-            box-shadow: none;
-            font-family: $mono-font;
-        }
-    }
+   }
     .outPutWindow {
         background-color: $tertiary-color;
         width: 30%;
         height: 100%;
         float: right;
         border-radius: 0px 10px 10px 0px;
+        padding: 0px;
+        img {
+            width: 50px !important;
+            height: auto;
+            margin: 0px;
+            margin-top: 2vh;
+            padding: 0px;
+        }
     }
 }
 

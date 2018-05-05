@@ -12,19 +12,50 @@ body {
   z-index: 101;
   position: fixed;
   background-color: cornflowerblue;
-  height: 100vh;
-  width: 100vw;
+  height: 240px;
+  width: 50vw;
   margin: 0px;
   padding: 0px;
   top: 0px;
   left: 100vw;
-  transition: left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1); }
+  transition: left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 0px 0px 0px 10px; }
   .menu i.material-icons {
     text-align: right;
     width: 50vw; }
+  .menu img {
+    display: none; }
+
+.menu > ul {
+  list-style-type: none;
+  margin: 0px;
+  padding-left: 0px; }
+  .menu > ul li {
+    text-align: center;
+    margin-left: 0px; }
+    .menu > ul li a {
+      color: white;
+      text-align: center;
+      margin-left: 0px;
+      text-decoration: none; }
 
 .show {
   left: 50vw; }
+
+.fade {
+  background-color: #000;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  opacity: 0.0;
+  transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  pointer-events: none; }
+
+.showFade {
+  opacity: 0.5;
+  pointer-events: auto; }
 
 .menuButton {
   position: fixed;
@@ -67,8 +98,53 @@ footer {
   background-color: cornflowerblue;
   width: 100vw;
   height: 20vh;
-  margin-top: 10vh; }
+  margin-top: 100px; }
 
+@media only screen and (min-device-width: 799px) {
+  .menu {
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    margin-bottom: 10vh;
+    border-radius: 0px; }
+    .menu i.material-icons {
+      display: none; }
+    .menu ul {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
+    .menu ul > li {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      float: left;
+      margin: 0px;
+      margin-left: 30px; }
+    .menu img {
+      display: block;
+      float: left;
+      height: 8vh;
+      width: auto;
+      margin-left: 40px;
+      margin-top: 1vh; }
+
+  .menuButton {
+    display: none; }
+
+  .fade {
+    display: none; }
+
+  .container {
+    width: 60vw;
+    margin-left: 20vw; }
+
+  .body {
+    width: 100vw; }
+
+  footer {
+    width: 100%; } }
 i.material-icons {
   font-size: 15vw;
   color: red; }
@@ -80,6 +156,10 @@ p {
 h2 {
   font-family: "Consolas";
   font-size: 20px; }
+
+li {
+  font-family: "Consolas";
+  font-size: 30px; }
 
 .index {
   margin-top: 8vh;
@@ -123,3 +203,20 @@ p.mock-code {
   margin: 6%; }
   p.mock-code span.keyword {
     color: #00EEEE; }
+
+@media only screen and (min-device-width: 799px) {
+  .index {
+    margin-top: 16vh;
+    margin-left: 0px; }
+    .index > img:first-of-type {
+      width: 10vw;
+      align-self: right;
+      margin: auto; }
+
+  .bg-wrapper {
+    width: 100%;
+    height: 100vh; }
+    .bg-wrapper img {
+      position: absolute;
+      bottom: 200px;
+      left: -20px; } }

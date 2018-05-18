@@ -29,19 +29,6 @@
     font-style: normal;
 }
 
-.bg-wrapper {
-    img {
-        width: 100vw;
-    }
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    overflow: hidden;
-    z-index: -100;
-}
-
 p.mock-code {
     font-family: $mono-font;
     font-size: 14px;

@@ -12,6 +12,12 @@ body {
     grid-template-rows: 1fr 1fr 1fr;
 }
 
+.grid-3x2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
 .menu {
     z-index: 101;
     i.material-icons {
@@ -27,10 +33,11 @@ body {
     width: 50vw;
     margin: 0px;
     padding: 0px;
-    top: 0px;
-    left: 100vw;
-    transition: left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+    top: -250px;
+    left: 50vw;
+    transition: top 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     border-radius: 0px 0px 0px 10px;
+    box-shadow: -1px 1px 5px #303030;
 }
 
 .menu>ul {
@@ -50,25 +57,25 @@ body {
 }
 
 .show {
-    left: 50vw;
+    top: 0vh;
 }
 
-.fade {
-    background-color: #000;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    opacity: 0.0;
-    transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-    pointer-events: none;
-}
+// .fade {
+//     background-color: #000;
+//     width: 100vw;
+//     height: 100vh;
+//     position: fixed;
+//     top: 0px;
+//     left: 0px;
+//     opacity: 0.0;
+//     transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+//     pointer-events: none;
+// }
 
-.showFade {
-    opacity: 0.5;
-    pointer-events: auto;
-}
+// .showFade {
+//     opacity: 0.5;
+//     pointer-events: auto;
+// }
 
 .menuButton {
     position: fixed;
@@ -88,18 +95,23 @@ aside {
 .codeWindow {
     grid-column: span 2;
     grid-row: span 1;
+    display: grid;
+    h2 {
+        grid-row: 1/2;
+        grid-column: span 2;
+    }
     .textEditor {
+        grid-row: 2/3;
+        grid-column: 1/2;
         background-color: #303030;
-        width: 70%;
-        height: 100%;
         float: left;
         border-radius: 10px 0px 0px 10px;
         padding: 0%;
     }
     .outPutWindow {
+        grid-row: 2/3;
+        grid-column: 2/3;
         background-color: $tertiary-color;
-        width: 30%;
-        height: 100%;
         float: right;
         border-radius: 0px 10px 10px 0px;
         padding: 0px;
@@ -118,6 +130,19 @@ footer {
     width: 100vw;
     height: 20vh;
     margin-top: 100px;
+}
+
+.bg-wrapper {
+    img {
+        width: 100vw;
+    }
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    z-index: -100;
 }
 
 @media only screen and (min-device-width: 799px) {
@@ -175,5 +200,11 @@ footer {
 
     footer {
         width: 100%;
+    }
+
+    .grid-3x2 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template: 1fr 1fr;
     }
 }

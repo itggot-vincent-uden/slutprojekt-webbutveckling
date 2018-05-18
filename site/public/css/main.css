@@ -8,18 +8,24 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr; }
 
+.grid-3x2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr; }
+
 .menu {
   z-index: 101;
   position: fixed;
-  background-color: cornflowerblue;
+  background-color: #004F6B;
   height: 240px;
   width: 50vw;
   margin: 0px;
   padding: 0px;
-  top: 0px;
-  left: 100vw;
-  transition: left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  border-radius: 0px 0px 0px 10px; }
+  top: -250px;
+  left: 50vw;
+  transition: top 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  border-radius: 0px 0px 0px 10px;
+  box-shadow: -1px 1px 5px #303030; }
   .menu i.material-icons {
     text-align: right;
     width: 50vw; }
@@ -40,22 +46,7 @@ body {
       text-decoration: none; }
 
 .show {
-  left: 50vw; }
-
-.fade {
-  background-color: #000;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  opacity: 0.0;
-  transition: opacity 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  pointer-events: none; }
-
-.showFade {
-  opacity: 0.5;
-  pointer-events: auto; }
+  top: 0vh; }
 
 .menuButton {
   position: fixed;
@@ -72,18 +63,22 @@ aside {
 
 .codeWindow {
   grid-column: span 2;
-  grid-row: span 1; }
+  grid-row: span 1;
+  display: grid; }
+  .codeWindow h2 {
+    grid-row: 1/2;
+    grid-column: span 2; }
   .codeWindow .textEditor {
+    grid-row: 2/3;
+    grid-column: 1/2;
     background-color: #303030;
-    width: 70%;
-    height: 100%;
     float: left;
     border-radius: 10px 0px 0px 10px;
     padding: 0%; }
   .codeWindow .outPutWindow {
+    grid-row: 2/3;
+    grid-column: 2/3;
     background-color: #aeb6be;
-    width: 30%;
-    height: 100%;
     float: right;
     border-radius: 0px 10px 10px 0px;
     padding: 0px; }
@@ -95,10 +90,21 @@ aside {
       padding: 0px; }
 
 footer {
-  background-color: cornflowerblue;
+  background-color: #004F6B;
   width: 100vw;
   height: 20vh;
   margin-top: 100px; }
+
+.bg-wrapper {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  overflow: hidden;
+  z-index: -100; }
+  .bg-wrapper img {
+    width: 100vw; }
 
 @media only screen and (min-device-width: 799px) {
   .menu {
@@ -144,21 +150,31 @@ footer {
     width: 100vw; }
 
   footer {
-    width: 100%; } }
+    width: 100%; }
+
+  .grid-3x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template: 1fr 1fr; } }
 i.material-icons {
   font-size: 15vw;
-  color: red; }
+  color: #FF8708; }
 
 p {
-  font-family: "Calibri";
+  font-family: "Open Sans", sans-serif;
   color: #000; }
 
+h1 {
+  font-family: "Nunito", sans-serif;
+  font-size: 70px;
+  color: white; }
+
 h2 {
-  font-family: "Consolas";
+  font-family: "Nunito", sans-serif;
   font-size: 20px; }
 
 li {
-  font-family: "Consolas";
+  font-family: "Ubuntu Mono", monospace;
   font-size: 30px; }
 
 .index {
@@ -185,19 +201,8 @@ li {
   color: #FFF;
   font-style: normal; }
 
-.bg-wrapper {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
-  z-index: -100; }
-  .bg-wrapper img {
-    width: 100vw; }
-
 p.mock-code {
-  font-family: "Consolas";
+  font-family: "Ubuntu Mono", monospace;
   font-size: 14px;
   color: #DDDDDD;
   margin: 6%; }
@@ -220,3 +225,5 @@ p.mock-code {
       position: absolute;
       bottom: 200px;
       left: -20px; } }
+.docs h1:first-of-type {
+  margin-left: 10vw; }

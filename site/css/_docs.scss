@@ -1,5 +1,59 @@
+@import '_vars.scss';
+
 .docs {
     h1:first-of-type {
         margin-left: 10vw;
+    }
+    ul.all-classes {
+        grid-row: span 10;
+        list-style: none;
+        margin-left: 0px;
+        padding-left: 5vw;
+        padding-right: 5vw;
+        li {
+            margin-left: 0px;
+        }
+        li>div.class-button {
+            display: grid;
+            grid-template-rows: 1fr;
+            grid-template-columns: 4fr 1fr;
+            margin-left: 0px;
+            height: 60px;
+            border-bottom: 1px solid $color-5;
+            &>h3 {
+                grid-row: span 1;
+                grid-column: span 1;
+                margin: 0px;
+                margin-top: 20px;
+            }
+            &>i.material-icons {
+                grid-row: span 1;
+                grid-column: span 1;
+                margin-top: 0px;
+                transform: translateY(10%);
+                color: $primary-color;
+            }
+        }
+        div.class-list {
+            max-height: 0px;
+            margin-left: 0px;
+            padding-left: 0px;
+            overflow: hidden;
+            transition: max-height 0.2s ease-in-out;
+            -webkit-transition: max-height 0.2s ease-in-out;
+            // background-color: #cccccc;
+            width: 80%;
+            margin-left: 5%;
+            margin-top: 10px;
+            ul {
+                list-style: none;
+                padding-left: 0px;
+            }
+        }
+        div.expand {
+            max-height: 9rem;
+            transition: max-height 0.2s ease-in-out;
+            -webkit-transition: max-height 0.2s ease-in-out;
+        }
     }
 }

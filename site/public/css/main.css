@@ -11,7 +11,7 @@ body {
 .grid-3x2 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr; }
+  grid-template-rows: repeat(10, 1fr); }
 
 .menu {
   z-index: 101;
@@ -55,7 +55,7 @@ body {
   z-index: 100; }
 
 aside {
-  background-color: #aeb6be;
+  background-color: #7DC4FF;
   padding: 8px;
   padding-top: 0px;
   border-radius: 3px;
@@ -78,7 +78,7 @@ aside {
   .codeWindow .outPutWindow {
     grid-row: 2/3;
     grid-column: 2/3;
-    background-color: #aeb6be;
+    background-color: #7DC4FF;
     float: right;
     border-radius: 0px 10px 10px 0px;
     padding: 0px; }
@@ -227,3 +227,46 @@ p.mock-code {
       left: -20px; } }
 .docs h1:first-of-type {
   margin-left: 10vw; }
+.docs ul.all-classes {
+  grid-row: span 10;
+  list-style: none;
+  margin-left: 0px;
+  padding-left: 5vw;
+  padding-right: 5vw; }
+  .docs ul.all-classes li {
+    margin-left: 0px; }
+  .docs ul.all-classes li > div.class-button {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 4fr 1fr;
+    margin-left: 0px;
+    height: 60px;
+    border-bottom: 1px solid #D67E13; }
+    .docs ul.all-classes li > div.class-button > h3 {
+      grid-row: span 1;
+      grid-column: span 1;
+      margin: 0px;
+      margin-top: 20px; }
+    .docs ul.all-classes li > div.class-button > i.material-icons {
+      grid-row: span 1;
+      grid-column: span 1;
+      margin-top: 0px;
+      transform: translateY(10%);
+      color: #004F6B; }
+  .docs ul.all-classes div.class-list {
+    max-height: 0px;
+    margin-left: 0px;
+    padding-left: 0px;
+    overflow: hidden;
+    transition: max-height 0.2s ease-in-out;
+    -webkit-transition: max-height 0.2s ease-in-out;
+    width: 80%;
+    margin-left: 5%;
+    margin-top: 10px; }
+    .docs ul.all-classes div.class-list ul {
+      list-style: none;
+      padding-left: 0px; }
+  .docs ul.all-classes div.expand {
+    max-height: 9rem;
+    transition: max-height 0.2s ease-in-out;
+    -webkit-transition: max-height 0.2s ease-in-out; }

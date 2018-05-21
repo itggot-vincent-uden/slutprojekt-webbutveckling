@@ -22,7 +22,8 @@ body {
     z-index: 101;
     i.material-icons {
         text-align: right;
-        width: 50vw;
+        width: 100%;
+        right: 0vw;
     }
     img {
         display: none;
@@ -30,11 +31,11 @@ body {
     position: fixed;
     background-color: $primary-color;
     height: 240px;
-    width: 50vw;
+    width: 100vw;
     margin: 0px;
     padding: 0px;
     top: -250px;
-    left: 50vw;
+    left: 0vw;
     transition: top 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     border-radius: 0px 0px 0px 10px;
     box-shadow: -1px 1px 5px #303030;
@@ -143,6 +144,10 @@ footer {
     left: 0px;
     overflow: hidden;
     z-index: -100;
+}
+
+.rot180 {
+    transform: inherit rotate(180deg);
 }
 
 @media only screen and (min-device-width: 799px) {

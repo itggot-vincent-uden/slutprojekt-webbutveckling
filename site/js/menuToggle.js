@@ -6,6 +6,13 @@ function toggleMenu(){
 }
 
 function expandClassList(divId) {
-    var element = document.getElementById("l" + divId[1]);
-    element.classList.toggle("expand");
+    var classList = document.getElementById("l" + divId[1]);
+    classList.classList.toggle("expand");
+
+    var button = document.getElementById(divId);
+    if (button.children[1].style.transform === "rotate(180deg)") {
+        button.children[1].style.transform = "";
+    } else {
+        button.children[1].style.transform += "rotate(180deg)";
+    }
 }

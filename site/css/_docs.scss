@@ -30,8 +30,10 @@
                 grid-row: span 1;
                 grid-column: span 1;
                 margin-top: 0px;
+                text-align: center;
                 transform: translateY(10%);
                 color: $primary-color;
+                transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
             }
         }
         div.class-list {

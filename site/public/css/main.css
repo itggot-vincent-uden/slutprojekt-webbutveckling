@@ -18,17 +18,18 @@ body {
   position: fixed;
   background-color: #004F6B;
   height: 240px;
-  width: 50vw;
+  width: 100vw;
   margin: 0px;
   padding: 0px;
   top: -250px;
-  left: 50vw;
+  left: 0vw;
   transition: top 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
   border-radius: 0px 0px 0px 10px;
   box-shadow: -1px 1px 5px #303030; }
   .menu i.material-icons {
     text-align: right;
-    width: 50vw; }
+    width: 100%;
+    right: 0vw; }
   .menu img {
     display: none; }
 
@@ -106,6 +107,9 @@ footer {
   .bg-wrapper img {
     width: 100vw; }
 
+.rot180 {
+  transform: inherit rotate(180deg); }
+
 @media only screen and (min-device-width: 799px) {
   .menu {
     width: 100%;
@@ -173,9 +177,15 @@ h2 {
   font-family: "Nunito", sans-serif;
   font-size: 20px; }
 
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 30px;
+  font-style: none;
+  font-weight: normal; }
+
 li {
-  font-family: "Ubuntu Mono", monospace;
-  font-size: 30px; }
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px; }
 
 .index {
   margin-top: 8vh;
@@ -251,8 +261,10 @@ p.mock-code {
       grid-row: span 1;
       grid-column: span 1;
       margin-top: 0px;
+      text-align: center;
       transform: translateY(10%);
-      color: #004F6B; }
+      color: #004F6B;
+      transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s; }
   .docs ul.all-classes div.class-list {
     max-height: 0px;
     margin-left: 0px;

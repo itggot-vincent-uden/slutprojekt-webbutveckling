@@ -9,9 +9,7 @@ body {
   grid-template-rows: 1fr 1fr 1fr; }
 
 .grid-3x2 {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(10, 1fr); }
+  display: block; }
 
 .menu {
   z-index: 101;
@@ -24,18 +22,33 @@ body {
   top: -250px;
   left: 0vw;
   transition: top 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
-  border-radius: 0px 0px 0px 10px;
+  border-radius: 0px 0px 10px 10px;
   box-shadow: -1px 1px 5px #303030; }
   .menu i.material-icons {
     text-align: right;
-    width: 100%;
-    right: 0vw; }
+    right: 0vw;
+    float: right;
+    margin-top: 2px;
+    margin-right: 2px;
+    display: inline; }
   .menu img {
-    display: none; }
+    height: 60px;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: inline; }
+  .menu ul {
+    margin-left: 30vw;
+    width: 40vw;
+    transform: translateY(-60px); }
+    .menu ul li {
+      width: 40vw; }
+    .menu ul li > a {
+      display: inline;
+      font-size: 30px;
+      color: white; }
 
 .menu > ul {
   list-style-type: none;
-  margin: 0px;
   padding-left: 0px; }
   .menu > ul li {
     text-align: center;
@@ -107,8 +120,44 @@ footer {
   .bg-wrapper img {
     width: 100vw; }
 
-.rot180 {
-  transform: inherit rotate(180deg); }
+div.searchBar {
+  height: 2rem;
+  border-radius: 1rem;
+  width: 90vw;
+  background-color: #FFFFFF;
+  padding: 0px;
+  margin-left: 5vw;
+  margin-top: 0px;
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 10px;
+  overflow: hidden; }
+  div.searchBar i.material-icons {
+    color: grey;
+    font-size: 1.8rem;
+    margin-top: 0.2rem;
+    margin-left: 1rem;
+    grid-row: span 1;
+    grid-column: span 1; }
+  div.searchBar input.searchBar:focus {
+    outline: none; }
+  div.searchBar input.searchBar {
+    height: 1.9rem;
+    border: none;
+    margin-top: 0px;
+    font-size: 1.4rem;
+    color: grey;
+    grid-row: span 1;
+    grid-column: span 1;
+    width: 65vw; }
+
+a {
+  text-decoration: none;
+  color: #004F6B; }
+
+a:hover {
+  background-color: #FF8708; }
 
 @media only screen and (min-device-width: 799px) {
   .menu {
@@ -175,7 +224,8 @@ h1 {
 
 h2 {
   font-family: "Nunito", sans-serif;
-  font-size: 20px; }
+  font-size: 40px;
+  color: #131313; }
 
 h3 {
   font-family: "Open Sans", sans-serif;
@@ -236,11 +286,17 @@ p.mock-code {
       bottom: 200px;
       left: -20px; } }
 .docs h1:first-of-type {
-  margin-left: 10vw; }
+  margin-left: 2vw;
+  margin-bottom: 15px; }
+.docs h2 {
+  margin-left: 5vw;
+  margin-top: 15px;
+  margin-bottom: 10px; }
 .docs ul.all-classes {
   grid-row: span 10;
   list-style: none;
   margin-left: 0px;
+  margin-top: 100px;
   padding-left: 5vw;
   padding-right: 5vw; }
   .docs ul.all-classes li {
@@ -267,14 +323,13 @@ p.mock-code {
       transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s; }
   .docs ul.all-classes div.class-list {
     max-height: 0px;
-    margin-left: 0px;
+    margin-left: 5%;
+    margin-top: 10px;
     padding-left: 0px;
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
     -webkit-transition: max-height 0.2s ease-in-out;
-    width: 80%;
-    margin-left: 5%;
-    margin-top: 10px; }
+    width: 80%; }
     .docs ul.all-classes div.class-list ul {
       list-style: none;
       padding-left: 0px; }

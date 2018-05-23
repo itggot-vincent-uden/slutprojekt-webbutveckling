@@ -64,4 +64,62 @@
             -webkit-transition: max-height 0.2s ease-in-out;
         }
     }
+    &>img:first-of-type {
+        display: none;
+    }
+}
+
+@media only screen and (min-device-width: 799px) {
+    .docs {
+        margin-top: 24vh;
+        // Logo
+        &>img:first-of-type {
+            display: block;
+            grid-row: span 1;
+            grid-column: span 1;
+            width: 20vw;
+            height: auto;   
+        }
+
+        h1 {
+            grid-row: span 1;
+            grid-column: span 1;
+            margin-top: 8vh;
+        }
+
+        &>h2:first-of-type {
+            margin-top: 30vh;
+            margin-bottom: 20px;
+        }
+
+        div.searchBar {
+            grid-row: 1/2;
+            grid-column: 3/4;
+            width: 20vw;
+            transform: translateY(-110px);
+        }
+
+        .all-classes {
+            transform: translateY(-10vh);
+            margin-top: 20px;
+            grid-column: span 3;
+            grid-row: span 2;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            .class-list {
+                grid-row: span 1;
+                grid-column: span 1;
+            }
+            i.material-icons {
+                display: none;
+            }
+            .class-list {
+                .class-ul {
+                    max-height: 9rem;
+                }
+                max-height: 9rem !important;
+            }
+        }
+
+    }
 }

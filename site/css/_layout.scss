@@ -126,10 +126,34 @@ aside {
 }
 
 footer {
-    background-color: $primary-color;
+    background-color: #0062ff;
     width: 100vw;
     height: 20vh;
     margin-top: 100px;
+    padding-top: 20px;
+    a {
+      color: white;  
+    }
+    p {
+        color: white;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.footer-bg {
+    img {
+        width: 100vw;
+    }
+    background-color: red;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    overflow: hidden;
+    z-index: -100;
+    transform: rotate(180deg);
 }
 
 .bg-wrapper {
@@ -201,14 +225,23 @@ a:hover {
             position: relative;
             top: 50%;
             transform: translateY(-50%);
-        }
-        ul>li {
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-            float: left;
-            margin: 0px;
-            margin-left: 30px;
+            width: 90vw;
+            height: 10vh;
+            margin-left: 10vw;
+            margin-top: 0;
+            &>li {
+                a {
+                    display: inline;
+                }
+                display: inline !important;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+                float: left;
+                margin: 0px;
+                margin-left: 30px;
+                width: auto;
+            }
         }
         img {
             display: block;
@@ -251,6 +284,6 @@ a:hover {
     .grid-3x2 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template: 1fr 1fr;
+        grid-template: 1fr 1fr 1fr 1fr;
     }
 }

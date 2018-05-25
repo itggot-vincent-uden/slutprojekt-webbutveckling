@@ -26,7 +26,108 @@
         <div class="bg-wrapper">
     <img src="./img/WavyBackGround.svg" alt="" srcset="" preserveAspectRatio="none">
 </div>
-<h1>Coggers</h1>
+<main class="class">
+    <img src="./img/logo.png" alt="Poggers Js">
+    <h1>Coggers</h1>
+    <div class="searchBar">
+        <i class="material-icons">search</i>
+        <input type="text" name="Search" placeholder="Search" class="searchBar">
+    </div>
+    <div class="listContainer">
+        <div id="b1" onclick="expandClassList(this.id)" class="method-button">
+            <h3>Methods</h3>
+            <i class="material-icons">keyboard_arrow_down</i>
+        </div>
+        <div id="l1" class="method-list">
+            <ul class="method-ul">
+                <li><a href="http://www.gurka.se">getStillImage</a></li>
+                <li><a href="http://www.gurka.se">setAnimSpeed</a></li>
+                <li><a href="http://www.gurka.se">getAnimSpeed</a></li>
+                <li><a href="http://www.gurka.se">setPosition</a></li>
+                <li><a href="http://www.gurka.se">getPosition</a></li>
+            </ul>
+        </div>
+        <div id="b2" onclick="expandClassList(this.id)" class="method-button">
+            <h3>Attributes</h3>
+            <i class="material-icons">keyboard_arrow_down</i>
+        </div>
+        <div id="l2" class="method-list">
+            <ul class="method-ul">
+                <li><a href="http://www.gurka.se">width</a></li>
+                <li><a href="http://www.gurka.se">height</a></li>
+                <li><a href="http://www.gurka.se">speed</a></li>
+                <li><a href="http://www.gurka.se">x</a></li>
+                <li><a href="http://www.gurka.se">y</a></li>
+            </ul>
+        </div>
+    </div>
+    <h2 id="sourceHeader">Source Code</h2>
+    <div id="firstSource" class="method-source">
+        <h3>getStillImage</h3>
+        <div class="sourceCode">
+            <p class="mock-code">
+                <span class="comment">// returns the emote's image</span><br>
+                <span class="keyword">function</span> getStillImage() {<br>
+                &emsp; <span class="keyword">return</span> this.image; <br>
+                }
+            </p>
+        </div>
+    </div>
+    <div class="method-source">
+        <h3>getAnimSpeed</h3>
+        <div class="sourceCode">
+            <p class="mock-code">
+                <span class="comment">// sets the emotes animation speed<br>// Args:<br>// speed: Float representing the scale factor of the speed</span><br>
+                <span class="keyword">function</span> setAnimSpeed(spd) {<br>
+                &emsp; this.gif.setPlayback(this.gif.playback*speed) <br>
+                }
+            </p>
+        </div>
+    </div>
+    <div class="method-source">
+        <h3>setAnimSpeed</h3>
+        <div class="sourceCode">
+            <p class="mock-code">
+                <span class="comment">// sets the emotes animation speed<br>// Args:<br>// speed: Float representing the scale factor of the speed</span><br>
+                <span class="keyword">function</span> setAnimSpeed(spd) {<br>
+                &emsp; this.gif.setPlayback(this.gif.playback*speed) <br>
+                }
+            </p>
+        </div>
+    </div>
+    <div class="method-source">
+        <h3>setPosition</h3>
+        <div class="sourceCode">
+            <p class="mock-code">
+                <span class="comment">// sets the emotes animation speed<br>// Args:<br>// speed: Float representing the scale factor of the speed</span><br>
+                <span class="keyword">function</span> setAnimSpeed(spd) {<br>
+                &emsp; this.gif.setPlayback(this.gif.playback*speed) <br>
+                }
+            </p>
+        </div>
+    </div>
+    <div class="method-source">
+        <h3>getPosition</h3>
+        <div class="sourceCode">
+            <p class="mock-code">
+                <span class="comment">// sets the emotes animation speed<br>// Args:<br>// speed: Float representing the scale factor of the speed</span><br>
+                <span class="keyword">function</span> setAnimSpeed(spd) {<br>
+                &emsp; this.gif.setPlayback(this.gif.playback*speed) <br>
+                }
+            </p>
+        </div>
+    </div>
+    <div class="attributes">
+        <h2>Attributes</h2>
+        <ul>
+            <li><span class="attribute-name">width</span> - Integer corresponding to the emote's width in pixels</li>
+            <li><span class="attribute-name">height</span> - Integer corresponding to the emote's height in pixels</li>
+            <li><span class="attribute-name">speed</span> - Floating point number corresponding to the factor multiplied by the emote's regular speed</li>
+            <li><span class="attribute-name">x</span> - Integer corresponding to the emote's x position if positioned absolutely</li>
+            <li><span class="attribute-name">y</span> - Integer corresponding to the emote's y position if positioned absolutely</li>
+        </ul>
+    </div>
+</main>
     </div>
     <footer>
         <p>Source code: <a href="https://github.com/jezen/is-thirteen">https://github.com/jezen/is-thirteen</a></p>

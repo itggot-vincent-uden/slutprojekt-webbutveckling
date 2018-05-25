@@ -1,0 +1,185 @@
+main.class {
+    padding-left: 5vw;
+    &>img {
+        display: none;
+    }
+    .searchBar {
+        width: 90vw;
+        margin-left: 0vw;
+    }
+    h1 {
+        margin-left: -10px;
+        margin-top: 17vh;
+        margin-bottom: 10px;
+    }
+
+    #b1 {
+        margin-top: 20vh;
+    }
+
+    div.method-button {
+        width: 90vw;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 4fr 1fr;
+        margin-left: 0px;
+        height: 60px;
+        border-bottom: 1px solid $color-5;
+        &>h3 {
+            grid-row: span 1;
+            grid-column: span 1;
+            margin: 0px;
+            margin-top: 20px;
+        }
+        &>i.material-icons {
+            grid-row: span 1;
+            grid-column: span 1;
+            margin-top: 0px;
+            text-align: center;
+            transform: translateY(10%);
+            color: $primary-color;
+            transition: transform cubic-bezier(0.075, 0.82, 0.165, 1) 0.2s;
+        }
+    }
+    div.method-list {
+        max-height: 0px;
+        margin-left: 5%;
+        margin-top: 2px;
+        padding-left: 0px;
+        overflow: hidden;
+        transition: max-height 0.2s ease-in-out;
+        -webkit-transition: max-height 0.2s ease-in-out;
+        // background-color: #cccccc;
+        width: 80%;
+        ul {
+            margin-top: 0px;
+            list-style: none;
+            padding-left: 0px;
+        }
+    }
+    div.expand {
+        max-height: 11rem;
+        transition: max-height 0.2s ease-in-out;
+        -webkit-transition: max-height 0.2s ease-in-out;
+    }
+    #sourceHeader {
+        margin-bottom: 5px;
+    }
+    .method-source {
+        border-top: solid 1px $primary-color;
+        width: 90vw;
+        padding-top: 0px;
+        margin-bottom: 15px;
+        h3 {
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+    }
+    .sourceCode {
+        background-color: #303030;
+        border-radius: 10px;
+        padding: 2px;
+        width: 90vw;
+        margin-left: 0vw;
+    }
+    .attributes {
+        border-top: solid 1px $primary-color;
+        width: 90vw;
+        .attribute-name {
+            color: $primary-color;
+        }
+        ul {
+            margin-left: 0px;
+            li {
+                margin-top: 10px;
+                margin-left: 0px;
+            }
+        }
+    }
+}
+
+@media only screen and (min-device-width: 799px) {
+    main.class { 
+        margin-top: 10.5vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(7, 1fr);
+        width: 60vw;
+        margin-left: 0px;
+        padding-left: 0px;
+        &>img:first-of-type {
+            grid-column: 1/2;
+            width: 18vw;
+            margin: 1vw;
+            display: block;
+        }
+        h1 {
+            grid-column: 2/3;
+            margin-top: 10vh;
+        }
+        .searchBar {
+            grid-column: 3/4;
+            grid-row: 1/2;
+            width: 20vw;
+            margin-left: 0;
+        }
+        div.method-source {
+            width: 40vw;
+            grid-column: 2/4;
+            grid-row: span 1;
+        }
+        div.listContainer {
+            grid-column: 1/2;
+            grid-row: 2/4;
+            height: auto;
+            margin: 20px;
+            border-radius: 10px;
+            background-color: $tertiary-color;
+            padding: 10px;
+            &>* {
+                width: auto !important;
+            }
+            #b1 {
+                margin-top: 5px;
+            }
+            div.method-button {
+                i {
+                    display: none;
+                }
+                width: 20vw;
+            }
+            div.method-list {
+                width: 20vw;
+                height: auto;
+                max-height: 100000000px !important;
+            }
+        }
+        div.attributes {
+            width: 40vw;
+            grid-column: 2/4;
+        }
+        div.sourceCode {
+            width: 40vw;
+        }
+        #sourceHeader {
+            grid-column: 2/4;
+            grid-row: 2/3;
+        }
+        // Det fungerade inte utan detta
+        &>div.method-source:nth-of-type(2) {
+            grid-row: 3/4;
+        }
+        &>div.method-source:nth-of-type(3) {
+            grid-row: 4/5;
+        }
+        &>div.method-source:nth-of-type(4) {
+            grid-row: 5/6;
+        }
+        &>div.method-source:nth-of-type(5) {
+            grid-row: 6/7;
+        }
+        &>div.method-source:nth-of-type(6) {
+            grid-row: 7/8;
+        }
+    }
+}
